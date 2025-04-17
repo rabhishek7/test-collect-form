@@ -1,0 +1,20 @@
+<html>
+  <head> </head>
+  <body>
+    <!-- Using your preferred programming language, set the 'action' attribute with the value of the query string parameter containing the 'deviceDataCollection.url' from the device data initialization response -->
+    <form id="collectionForm" name="devicedata" method="POST" action="{{url}}">
+      <!-- Using your preferred programming language, set the 'value' attribute with the value of the query string parameter containing the 'deviceDataCollection.bin' from the device data initialization response -->
+      <input type="hidden" name="Bin" value="{{bin}}" />
+
+      <!-- Using your preferred programming language, set the 'value' attribute with the value of the query string parameter containing the 'deviceDataCollection.jwt' from the device data initialization response -->
+
+      <input type="hidden" name="JWT" value="{{token}}" />
+    </form>
+
+    <script>
+      window.onload = function () {
+        document.getElementById("collectionForm").submit();
+      };
+    </script>
+  </body>
+</html>
