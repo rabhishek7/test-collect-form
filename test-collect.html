@@ -13,18 +13,24 @@
 
     <script>
       window.onload = function () {
-        // const form = document.forms["devicedata"];
-        // form.action = localStorage.getItem("DDC_URL");
-        document.getElementById("collectionForm").action =
-          localStorage.getItem("DDC_URL");
-        // document.querySelector('input[name="Bin"]').value =
-        //   localStorage.getItem("DDC_BIN");
-        // document.querySelector('input[name="JWT"]').value =
-        //   localStorage.getItem("DDC_TOKEN");
-        document.getElementById("bin").value = localStorage.getItem("DDC_BIN");
-        document.getElementById("jwt").value =
-          localStorage.getItem("DDC_TOKEN");
-        document.getElementById("collectionForm").submit();
+        window.onload = function () {
+          setTimeout(initializeAndSubmitForm, 500); // Adjust delay as needed
+        };
+        function initializeAndSubmitForm() {
+          // const form = document.forms["devicedata"];
+          // form.action = localStorage.getItem("DDC_URL");
+          document.getElementById("collectionForm").action =
+            localStorage.getItem("DDC_URL");
+          // document.querySelector('input[name="Bin"]').value =
+          //   localStorage.getItem("DDC_BIN");
+          // document.querySelector('input[name="JWT"]').value =
+          //   localStorage.getItem("DDC_TOKEN");
+          document.getElementById("bin").value =
+            localStorage.getItem("DDC_BIN");
+          document.getElementById("jwt").value =
+            localStorage.getItem("DDC_TOKEN");
+          document.getElementById("collectionForm").submit();
+        }
       };
     </script>
   </body>
